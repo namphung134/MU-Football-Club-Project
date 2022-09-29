@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.manutd.com/Assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.manutd.com/Assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.manutd.com/Assets/images/favicons/favicon-16x16.png" />
+
+    <title>Manchester United Website</title>
+
+    <link rel="stylesheet" href="../../assests/css/responsive-index.css">
+    <link rel="stylesheet" href="../../assests/css/style.css">
+
+    <link rel="stylesheet" href="../../assests/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assests/icons/font-awesome-4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../../assests/css/slick.css">
+
+    <link rel="stylesheet" href="../../assests/css/bootstrap_css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../../assests/css/pages/shop/collections.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
+</head>
+
+<body>
+
+    <!-- Start Header -->
+    <div id="search-display" class="search-button">
+        <div class="home-search__panel">
+            <div class="text-area">
+                <input type="text" id="input-search" placeholder="What are you looking for?">
+            </div>
+            <div class="sp-btn">
+                <a href="#" role="button">
+                    <span>Search</span>
+                </a>
+            </div>
+            <div class="close-search" role="button" onclick="closeSearch()">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="header-logo">
+            <a href="../../index.html">
+                <img src="../../assests/img/logo-mu.png" alt="">
+            </a>
+        </div>
+
+
+        <ul id="nav">
+            <li>
+                <a href="../../pages/myutd/myUtd.html">
+                    My United
+                </a>
+                <ul class="subnav">
+                    <li><a href="../../pages/myutd/firstTeam.html">Men</a></li>
+                    <li><a href="../../pages/myutd/womenTeam.html">Women</a></li>
+                    <li><a href="../../pages/myutd/youngsTeam.html">Youngs</a></li>
+                    <li><a href="../../pages/myutd/legendTeam.html">Legends</a></li>
+                </ul>
+            </li>
+            <li><a href="../../pages/news/news.html">News</a></li>
+            <li><a href="../../pages/shop/collections.html">Shop</a></li>
+            <li><a href="../../pages/ticket/ticket_match.html">Tickets</a></li>
+            <li>
+                <a href="">
+                    More
+                </a>
+                <ul class="subnav">
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Infomation</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+        <div class="header-options">
+            <div class="search-btn">
+                <i class="search-icon ti-search" onclick="openSearch()"></i>
+            </div>
+
+            <div class="help-btn">
+                <i class="help-icon ti-help-alt" href="#questionModal" data-dismiss="modal" data-toggle="modal"></i>
+            </div>
+
+            <div class="header-sign" data-toggle="modal" data-target="#loginModal">
+                <i class="sign-items fa fa-user-o"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+                <div class="subnav">
+                    <li><a href="../../pages/myutd/myUtd.html">My Utd</a></li>
+                    <li><a href="../../pages/news/news.html">News</a></li>
+                    <li><a href="../../pages/shop/collections.html">Shop</a></li>
+                    <li><a href="../../pages/ticket/ticket_match.html">Tickets</a></li>
+                    <li><a href="#">More</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Nav + side bar -->
+
+    <div class="container">
+        <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header-container">
+            <nav class="navbar navbar-expand-lg navbar-light pl-lg-0 pl-auto"> <button class="navbar-toggler" id="icon"> <span
+                        class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="mynav">
+                    <ul class="navbar-nav d-lg-flex align-items-lg-center">
+                        <li class="nav-item active"> <select name="sort" id="sort">
+                                <option value="" hidden selected>Sort by</option>
+                                <option value="price">Price</option>
+                                <option value="popularity">Popularity</option>
+                                <option value="rating">Rating</option>
+                            </select> </li>
+                        <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
+                            <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
+                                <div class="pl-2">Products:</div> <select name="pro" id="pro">
+                                    <option value="18">12</option>
+                                    <option value="19">20</option>
+                                    <option value="20">30</option>
+                                </select>
+                            </div>
+                            <div class="font-weight-bold mx-2 result">12 from 200</div>
+                        </li>
+                        <li class="nav-item d-lg-none d-inline-flex"> </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="ml-auto mt-3 mr-2">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true" class="font-weight-bold">&lt;</span> <span class="sr-only">Previous</span> </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">..</a></li>
+                        <li class="page-item"><a class="page-link" href="#">24</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true" class="font-weight-bold">&gt;</span> <span class="sr-only">Next</span> </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="content" class="my-5">
+            <div id="filterbar" class="collapse">
+                <div class="box border-bottom">
+                    <div class="form-group text-center">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-success form-check-label">
+                                <input class="form-check-input" type="radio"> Reset </label>
+                            <label class="btn btn-success form-check-label active"> <input class="form-check-input"
+                                    type="radio" checked> Apply </label>
+                        </div>
+                    </div>
+                    <div> <label class="tick">New <input type="checkbox" checked="checked"> <span class="check"></span>
+                        </label> </div>
+                    <div> <label class="tick">Sale <input type="checkbox"> <span class="check"></span> </label> </div>
+                </div>
+                <div class="box border-bottom">
+                    <div class="box-label text-uppercase d-flex align-items-center">FEATURED DEPARTMENTS</div>
+                    <div id="inner-box" class="mt-2 mr-1 show">
+                        <div class="my-1"> <label class="tick">Face cover <input type="checkbox" checked="checked">
+                                <span class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Scarves <input type="checkbox"> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Training <input type="checkbox"> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Sale items <input type="checkbox"> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Jacket <input type="checkbox"> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Footwear <input type="checkbox" checked> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Headwear <input type="checkbox"> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Premium gifts <input type="checkbox" checked> <span
+                                    class="check"></span> </label> </div>
+                    </div>
+                </div>
+                <div class="box border-bottom">
+                    <div class="box-label text-uppercase d-flex align-items-center">Kits type</div>
+                    <div id="inner-box2" class="mt-2 mr-1 show">
+                        <div class="my-1"> <label class="tick">Home <input type="checkbox" checked="checked"> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Away <input type="checkbox"> <span class="check"></span>
+                            </label> </div>
+                        <div class="my-1"> <label class="tick">Third <input type="checkbox" checked> <span
+                                    class="check"></span> </label> </div>
+                        <div class="my-1"> <label class="tick">Goal keeper <input type="checkbox"> <span
+                                    class="check"></span> </label> </div>
+                    </div>
+                </div>
+                <div class="box border-bottom">
+                    <div class="box-label text-uppercase d-flex align-items-center">Price </div>
+                    <div class="show" id="price">
+                        <div class="middle">
+                            <div class="multi-range-slider"> <input type="range" id="input-left" min="0" max="100" value="10"> <input type="range" id="input-right" min="0" max="100" value="50">
+                                <div class="slider-price">
+                                    <div class="track"></div>
+                                    <div class="range"></div>
+                                    <div class="thumb left"></div>
+                                    <div class="thumb right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mt-2">
+                            <div> <span id="amount-left" class="font-weight-bold"></span> $10.00 </div>
+                            <div> <span id="amount-right" class="font-weight-bold"></span> $500.00 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-label text-uppercase d-flex align-items-center">Size</div>
+                    <div id="size" class="show">
+                        <div class="btn-group d-flex align-items-center flex-wrap" data-toggle="buttons"> <label class="btn btn-success form-check-label"> <input class="form-check-input"
+                                    type="checkbox"> S </label> <label class="btn btn-success form-check-label"> <input
+                                    class="form-check-input" type="checkbox" checked> M </label> <label class="btn btn-success form-check-label"> <input class="form-check-input"
+                                    type="checkbox" checked> L </label> <label class="btn btn-success form-check-label">
+                                <input class="form-check-input" type="checkbox" checked> XL </label> <label class="btn btn-success form-check-label"> <input class="form-check-input"
+                                    type="checkbox" checked> XXL </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="products">
+                <div class="row mx-0">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="../../pages/shop/product_detail.html" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/home_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/home_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="../../pages/shop/product_detail.html">Manchester United Home Shirt 2021-22</a></h3>
+                                    <div class="price">$42.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/away_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/away_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United Away Shirt 2021-22</a></h3>
+                                    <div class="price">$32.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/third_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/third_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">
+                                            Manchester United Third Shirt 2021-22</a></h3>
+                                    <div class="price">$42.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/scarf_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/scarf_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United Retro Scarf</a></h3>
+                                    <div class="price">$14.50</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/adidas_CR7_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/adidas_CR7_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United adidas CR7 T-Shirt</a>
+                                    </h3>
+                                    <div class="price">$13.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/Home_kit_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/Home_kit_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United Home Minikit 2021-22</a></h3>
+                                    <div class="price">$29.50</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/cap_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/cap_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United New Era Cap</a></h3>
+                                    <div class="price">$24.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/backpack_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/backpack_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United Power Backpack</a></h3>
+                                    <div class="price">$23.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/goal_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/goal_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United Cup Home Goalkeeper Shirt</a></h3>
+                                    <div class="price">$76.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/bag_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/bag_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United Tote Bag</a></h3>
+                                    <div class="price">$46.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/face_cover_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/face_cover_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United 3 Pack Face Coverings</a>
+                                    </h3>
+                                    <div class="price">$14.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="../../assests/img/Shop/sock_1.jpg">
+                                        <img class="pic-2" src="../../assests/img/Shop/sock_2.jpg">
+                                    </a>
+                                    <ul class="product-links">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">Manchester United 2 Pack Ankle Socks</a></h3>
+                                    <div class="price">$11.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--START FOOTER -->
+    <div class="footer" style="margin-bottom: -42px;">
+        <div class="footer__social-links">
+            <div class="footer-logo ">
+                <img src="../../assests/img/logo/mu_black.png " alt=" ">
+            </div>
+
+            <div class="social-list ">
+                <a href="https://www.facebook.com/manchesterunited/ "><i class="ti-facebook "></i></a>
+                <a href="https://www.youtube.com/manutd"><i class="ti-youtube "></i></a>
+                <a href="https://twitter.com/ManUtd"><i class="ti-twitter "></i></a>
+                <a href="https://www.instagram.com/manchesterunited/"><i class="ti-instagram "></i></a>
+                <a href="https://www.tiktok.com/@manutd"><i class="fab fa-tiktok fa-1x "></i></a>
+            </div>
+        </div>
+
+        <div class="footer-sponsor ">
+            <div class="sponsor__primary ">
+                <img src="../../assests/img/sponsor/adidas.png " alt=" ">
+                <img src="../../assests/img/sponsor/teamViewer.png " alt=" ">
+                <img src="../../assests/img/sponsor/tezos.png " alt=" ">
+                <img src="../../assests/img/sponsor/kholer.png " alt=" ">
+            </div>
+            <div class="sponsor__secondary ">
+                <ul>
+                    <li><img src="../../assests/img/sponsor/apolo.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/cadbury.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/canon.jpg " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/casillero.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/chevrolet.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/chivas.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/DHL.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/ecolab.png " alt=" "></li>
+                    <!-- <li><img src="../../assests/img/sponsor/HCL.png " alt=" "></li> -->
+                    <li><img src="../../assests/img/sponsor/KONAMI.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/marriott.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/MauiGim.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/melitta.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/Mlily.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/reminton.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/renewable.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/tag.png " alt=" "></li>
+                    <li><img src="../../assests/img/sponsor/Visitmalta.png " alt=" "></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright ">
+            <div class="col footer_copyright_text ">
+                Manchester United © 2022 All rights reserved
+            </div>
+        </div>
+    </div>
+    <!-- END Footer -->
+
+
+    <!-- Start: modal question -->
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Do you have any questions?</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="question1" placeholder="Your questions...">
+                            </div>
+                            <button type="button" class="btn btn-info btn-block btn-round">Submit</button>
+                        </form>
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Start: modal login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Login</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                            </div>
+                            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                        </form>
+
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <div class="d-flex justify-content-center social-buttons">
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                  </button>
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                    <i class="fab fa-linkedin"></i>
+                  </button>
+                            </di>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="signup-section">Not a member yet? <a href="#sign-up_Modal" data-dismiss="modal" data-toggle="modal" class="text-inf"> Sign Up</a>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal sign up -->
+    <div class="modal fade" id="sign-up_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Sign Up</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="form-group">
+                                <input type="name" class="form-control" id="name" placeholder="Enter your name...">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                            </div>
+                            <!-- <div class="form-group">
+                                <input type="password" class="form-control" id="password1_confirmation" placeholder="Retype password...">
+                            </div> -->
+                            <button type="button" class="btn btn-info btn-block btn-round">Sign Up</button>
+                        </form>
+
+                        <div class="text-center text-muted delimiter">or use a social network</div>
+                        <div class="d-flex justify-content-center social-buttons">
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                          </button>
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                          </button>
+                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                          </button>
+                            </di>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="signup-section">If you have an acount? <a href="#loginModal" data-dismiss="modal" data-toggle="modal" class="text-inf"> Login</a>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+    <!--END: modal login -->
+
+    <!-- End Nav + side bar -->
+    <script src="../../assests/js/jquery.min.js"></script>
+    <script src="../../assests/js/slick.min.js"></script>
+    <script src="../../assests/js/index.js"></script>
+    <script src="../../assests/js/bootstrap_js/js/bootstrap.min.js"></script>
+    <script src="../../assests/js/pages/shop/collections.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../assests/js/bootstrap_js/js/bootstrap.bundle.min_V4.js"></script>
+</body>
+
+</html>
